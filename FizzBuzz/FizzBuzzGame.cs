@@ -16,6 +16,12 @@ namespace FizzBuzz
                 return "Buzz";
             }
 
+            if (orderNumber % 7 == 0)
+            {
+                return "Whizz";
+            }
+
+
             return orderNumber.ToString();
         }
     }
