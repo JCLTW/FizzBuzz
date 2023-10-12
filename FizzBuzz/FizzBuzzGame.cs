@@ -11,6 +11,11 @@ namespace FizzBuzz
                 return "Fizz";
             }
 
+            if (orderNumber % 5 == 0)
+            {
+                return "Buzz";
+            }
+
             return orderNumber.ToString();
         }
     }
