@@ -23,7 +23,7 @@ namespace FizzBuzzTest
         [InlineData(3)]
         [InlineData(6)]
         [InlineData(9)]
-        public void Should_return_the_Fizz_when_countoff_given_a_number_not_multiple_of_3(int givenNumber)
+        public void Should_return_the_Fizz_when_countoff_given_a_number_multiple_of_3(int givenNumber)
         {
             // When
             string result = FizzBuzzGame.CountOff(givenNumber);
@@ -35,7 +35,7 @@ namespace FizzBuzzTest
         [InlineData(5)]
         [InlineData(10)]
         [InlineData(20)]
-        public void Should_return_the_Buzz_when_countoff_given_a_number_not_multiple_of_5(int givenNumber)
+        public void Should_return_the_Buzz_when_countoff_given_a_number_multiple_of_5(int givenNumber)
         {
             // When
             string result = FizzBuzzGame.CountOff(givenNumber);
@@ -47,12 +47,60 @@ namespace FizzBuzzTest
         [InlineData(7)]
         [InlineData(14)]
         [InlineData(21)]
-        public void Should_return_the_Whizz_when_countoff_given_a_number_not_multiple_of_7(int givenNumber)
+        public void Should_return_the_Whizz_when_countoff_given_a_number_multiple_of_7(int givenNumber)
         {
             // When
             string result = FizzBuzzGame.CountOff(givenNumber);
             // Then
             Assert.Equal("Whizz", result);
+        }
+
+        [Theory]
+        [InlineData(15)]
+        [InlineData(30)]
+        [InlineData(45)]
+        public void Should_return_the_FizzBuzz_when_countoff_given_a_number_multiple_of_3_and_5(int givenNumber)
+        {
+            // When
+            string result = FizzBuzzGame.CountOff(givenNumber);
+            // Then
+            Assert.Equal("FizzBuzz", result);
+        }
+
+        [Theory]
+        [InlineData(21)]
+        [InlineData(42)]
+        [InlineData(63)]
+        public void Should_return_the_FizzWhizz_when_countoff_given_a_number_multiple_of_3_and_7(int givenNumber)
+        {
+            // When
+            string result = FizzBuzzGame.CountOff(givenNumber);
+            // Then
+            Assert.Equal("FizzWhizz", result);
+        }
+
+        [Theory]
+        [InlineData(35)]
+        [InlineData(70)]
+        [InlineData(105)]
+        public void Should_return_the_BuzzWhizz_when_countoff_given_a_number_multiple_of_5_and_7(int givenNumber)
+        {
+            // When
+            string result = FizzBuzzGame.CountOff(givenNumber);
+            // Then
+            Assert.Equal("BuzzWhizz", result);
+        }
+
+        [Theory]
+        [InlineData(105)]
+        [InlineData(70)]
+        [InlineData(105)]
+        public void Should_return_the_BuzzWhizz_when_countoff_given_a_number_not_multiple_of_3_and_5_and_7(int givenNumber)
+        {
+            // When
+            string result = FizzBuzzGame.CountOff(givenNumber);
+            // Then
+            Assert.Equal("BuzzWhizz", result);
         }
     }
 }
