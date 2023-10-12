@@ -7,12 +7,14 @@ namespace FizzBuzzTest
     public class FizzBuzzGameTest
     {
         [Fact]
-        public void Test1()
+        public void Should_return_the_given_number_when_countoff_given_a_number_not_multiple_of_3_5_7()
         {
-            FizzBuzzGame fizzBuzzGame = new FizzBuzzGame();
-
-            //then
-            Assert.NotNull(fizzBuzzGame);
+            // Given
+            int givenNumber = 1;
+            // When
+            string result = FizzBuzzGame.CountOff(givenNumber);
+            // Then
+            Assert.Equal(givenNumber.ToString(), result);
         }
     }
 }
