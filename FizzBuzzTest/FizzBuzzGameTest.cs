@@ -46,7 +46,7 @@ namespace FizzBuzzTest
         [Theory]
         [InlineData(7)]
         [InlineData(14)]
-        [InlineData(21)]
+        [InlineData(28)]
         public void Should_return_the_Whizz_when_countoff_given_a_number_multiple_of_7(int givenNumber)
         {
             // When
