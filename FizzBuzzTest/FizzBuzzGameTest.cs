@@ -82,7 +82,7 @@ namespace FizzBuzzTest
         [Theory]
         [InlineData(35)]
         [InlineData(70)]
-        [InlineData(105)]
+        [InlineData(140)]
         public void Should_return_the_BuzzWhizz_when_countoff_given_a_number_multiple_of_5_and_7(int givenNumber)
         {
             // When
@@ -93,14 +93,14 @@ namespace FizzBuzzTest
 
         [Theory]
         [InlineData(105)]
-        [InlineData(70)]
-        [InlineData(105)]
+        [InlineData(210)]
+        [InlineData(315)]
         public void Should_return_the_BuzzWhizz_when_countoff_given_a_number_not_multiple_of_3_and_5_and_7(int givenNumber)
         {
             // When
             string result = FizzBuzzGame.CountOff(givenNumber);
             // Then
-            Assert.Equal("BuzzWhizz", result);
+            Assert.Equal("FizzBuzzWhizz", result);
         }
     }
 }
