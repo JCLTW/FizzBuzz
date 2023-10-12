@@ -4,15 +4,15 @@ using Xunit;
 
 namespace FizzBuzzTest
 {
-    public class Class1Test
+    public class FizzBuzzGameTest
     {
         [Fact]
         public void Test1()
         {
-            Class1 class1 = new Class1();
+            FizzBuzzGame fizzBuzzGame = new FizzBuzzGame();
 
             //then
-            Assert.NotNull(class1);
+            Assert.NotNull(fizzBuzzGame);
         }
     }
 }
