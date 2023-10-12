@@ -7,17 +7,20 @@ namespace FizzBuzz
         public static string CountOff(int orderNumber)
         {
             var result = string.Empty;
-            if (orderNumber % 3 == 0)
+            bool isMultipleOfThree = orderNumber % 3 == 0;
+            bool isMultipleOfFive = orderNumber % 5 == 0;
+            bool isMultipleOfSeven = orderNumber % 7 == 0;
+            if (isMultipleOfThree)
             {
                 result += "Fizz";
             }
 
-            if (orderNumber % 5 == 0)
+            if (isMultipleOfFive)
             {
                 result += "Buzz";
             }
 
-            if (orderNumber % 7 == 0)
+            if (isMultipleOfSeven)
             {
                 result += "Whizz";
             }
