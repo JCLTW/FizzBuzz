@@ -6,43 +6,23 @@ namespace FizzBuzz
     {
         public static string CountOff(int orderNumber)
         {
-            if (orderNumber % 3 == 0 && orderNumber % 5 == 0 && orderNumber % 7 == 0)
-            {
-                return "FizzBuzzWhizz";
-            }
-
-            if (orderNumber % 3 == 0 && orderNumber % 5 == 0)
-            {
-                return "FizzBuzz";
-            }
-
-            if (orderNumber % 3 == 0 && orderNumber % 7 == 0)
-            {
-                return "FizzWhizz";
-            }
-
-            if (orderNumber % 5 == 0 && orderNumber % 7 == 0)
-            {
-                return "BuzzWhizz";
-            }
-
+            var result = string.Empty;
             if (orderNumber % 3 == 0)
             {
-                return "Fizz";
+                result += "Fizz";
             }
 
             if (orderNumber % 5 == 0)
             {
-                return "Buzz";
+                result += "Buzz";
             }
 
             if (orderNumber % 7 == 0)
             {
-                return "Whizz";
+                result += "Whizz";
             }
 
-
-            return orderNumber.ToString();
+            return string.IsNullOrEmpty(result) ? orderNumber.ToString() : result;
         }
     }
 }
