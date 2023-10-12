@@ -6,6 +6,11 @@ namespace FizzBuzz
     {
         public static string CountOff(int orderNumber)
         {
+            if (orderNumber % 3 == 0 && orderNumber % 5 == 0)
+            {
+                return "FizzBuzz";
+            }
+
             if (orderNumber % 3 == 0)
             {
                 return "Fizz";
